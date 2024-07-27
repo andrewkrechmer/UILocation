@@ -53,7 +53,7 @@ func printDetailsFlipped(for location: UILocation?) {
     print("help: \(location?.help)")
     
     print("--- --- --- --- --- ---")
-    if let location = location?.childElementLocation {
+    if let location = UILocationDataPath?.childElementLocation {
         printDetailsFlipped(for: location)
     }
 }
@@ -248,6 +248,7 @@ class UILocation: Codable {
         try container.encodeIfPresent(childElementLocation, forKey: .childElementLocation)
     }
 }
+
 
 
 
